@@ -1,0 +1,48 @@
+$merah: #e63946;
+$putih: #eef9fa;
+$biru1: #d1f2f5;
+$biru2: #457b9d;
+$biru3: #1d3557;
+
+.btn {
+    display: block;
+    margin: 0;
+    color: white;
+    outline: none;
+    padding: 0.6em 2em;
+    border-radius: 3em;
+    width: fit-content;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: none;
+    font-weight: bold;
+
+    &.merah {
+        border: 1px solid $merah;
+        color: $merah;
+        transition: 0.2s;
+        &:hover {
+            background-color: $merah;
+            color: white;
+            transition: 0.2s;
+        }
+    }
+    &.biru {
+        border: 1px solid $biru3;
+        color: $biru3;
+        &:hover {
+            background-color: $biru3;
+            color: white;
+            transition: 0.2s;
+        }
+    }
+    &.putih {
+        border: 1px solid white;
+        color: white;
+        &:hover {
+            background-color: white;
+            color: black;
+            transition: 0.2s;
+        }
+    }
+}

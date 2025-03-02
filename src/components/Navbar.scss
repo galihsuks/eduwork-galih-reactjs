@@ -1,0 +1,42 @@
+$merah: #e63946;
+$putih: #eef9fa;
+$biru1: #d1f2f5;
+$biru2: #457b9d;
+$biru3: #1d3557;
+
+nav {
+    background-color: $putih;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+nav > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+.logo {
+    margin: 0;
+    font-size: 1.7em;
+    font-family: "Comforter", cursive;
+    color: $biru3;
+}
+
+.container-list {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        padding-inline: 1em;
+        color: $biru2;
+
+        &:hover {
+            color: $biru3;
+        }
+    }
+}

@@ -1,0 +1,122 @@
+$merah: #e63946;
+$putih: #eef9fa;
+$biru1: #d1f2f5;
+$biru2: #457b9d;
+$biru3: #1d3557;
+@import url("https://fonts.googleapis.com/css2?family=Comforter&display=swap");
+
+* {
+    font-family: "Poppins";
+    color: $biru3;
+}
+body {
+    background-color: $putih;
+}
+h5 {
+    color: $merah;
+}
+p {
+    font-size: 12px;
+    margin: 0;
+}
+li {
+    font-size: 12px;
+}
+.container {
+    width: 80%;
+    margin-inline: auto;
+    max-width: 1000px;
+}
+.bg-biru1 {
+    background-color: $biru1;
+}
+.text-merah {
+    color: $merah;
+}
+.text-putih {
+    color: white;
+}
+
+.item-experience {
+    border: 1px solid gray;
+    border-radius: 1em;
+    padding: 2em;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .judul {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .label {
+        background-color: $merah;
+        color: white;
+        padding: 0.5em 2em;
+        border-radius: 3em;
+    }
+    .tanggal {
+        color: $merah;
+        font-weight: 500;
+    }
+}
+
+.container-projects {
+    display: flex;
+    gap: 0.7em;
+    width: 100%;
+
+    .item-projects {
+        flex: 1;
+        background-size: cover;
+        border-radius: 1em;
+        position: relative;
+        border-radius: 1em;
+        overflow: hidden;
+
+        .depan {
+            padding: 2em;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0);
+            width: calc(100% - 4em);
+            height: calc(100% - 4em);
+            transition: 0.5s;
+        }
+        img {
+            width: 100%;
+        }
+
+        .nama {
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: -5px;
+        }
+        .stack {
+            color: white;
+            margin-bottom: 1em;
+        }
+        .isi {
+            max-height: 0px;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        &:hover .depan {
+            background-color: rgba(0, 0, 0, 0.7);
+            transition: 0.5s;
+            z-index: 5;
+        }
+        &:hover img {
+            filter: blur(2px) saturate(0.5);
+            z-index: 1;
+        }
+        &:hover .isi {
+            max-height: 100px;
+            transition: 0.5s;
+        }
+    }
+}
