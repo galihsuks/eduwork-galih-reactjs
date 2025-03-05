@@ -1,0 +1,40 @@
+input {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 0.4em 0.7em;
+    width: 100%;
+}
+
+button {
+    border: 1px solid black;
+    outline: none;
+    background: none;
+    padding: 0.6em;
+    border-radius: 3em;
+    cursor: pointer;
+}
+button:hover {
+    background-color: black;
+    color: white;
+}
+
+label {
+    display: block;
+}
+
+.container-error {
+    color: red;
+}
+.container-error span {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.container-error span::before {
+    content: "";
+    display: block;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 2em;
+}
