@@ -1,0 +1,64 @@
+.container-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.card-news {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+
+    .description {
+        position: relative;
+        flex: 1;
+
+        .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: linear-gradient(to top, white, transparent);
+            z-index: 3;
+        }
+        p {
+            z-index: 2;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-size: 12px;
+        }
+    }
+}
+.card-news img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 1em;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid dodgerblue;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
