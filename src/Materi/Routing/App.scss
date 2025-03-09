@@ -1,0 +1,110 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        225deg,
+        rgba(215, 75, 153, 1) 0%,
+        rgba(81, 84, 182, 1) 84%
+    );
+    width: 100%;
+    height: 100svh;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    // padding: 1em 2em;
+
+    a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+        padding-inline: 2em;
+        padding-block: 2em 1em;
+        letter-spacing: 2px;
+        transition: 0.2s;
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+        &:hover {
+            border-bottom: 2px solid rgb(255, 165, 215);
+            transition: 0.2s;
+        }
+    }
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-content {
+        padding: 3em 4em;
+        border-block: 1px solid white;
+        max-width: 80%;
+    }
+}
+
+h1 {
+    font-weight: bold;
+}
+.btn-link {
+    color: rgb(255, 165, 215);
+    text-decoration: none;
+    transition: 0.2s;
+    &:hover {
+        color: rgb(184, 186, 255);
+        font-weight: 600;
+        transition: 0.2s;
+    }
+}
+
+.container-product {
+    display: flex;
+    gap: 1em;
+    max-width: 650px;
+
+    .item-product {
+        text-decoration: none;
+        color: white;
+        width: 200px;
+        border-radius: 1.1em;
+        transition: 0.3s;
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 1em;
+            margin-bottom: 1em;
+        }
+        h1 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+            width: 80%;
+        }
+        .desc {
+            margin-top: 0.5em;
+            color: rgb(255, 181, 222);
+            font-size: 12px;
+        }
+
+        &:hover {
+            background-color: white;
+            padding: 1em;
+            transition: 0.3s;
+
+            h1,
+            p {
+                color: rgba(81, 84, 182, 1);
+            }
+        }
+    }
+}

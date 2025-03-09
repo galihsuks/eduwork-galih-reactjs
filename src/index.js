@@ -1,13 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./Materi/Routing/App";
+import Home from "./Materi/Routing/components/Home";
+import Product from "./Materi/Routing/components/Product";
+import ProductDetail from "./Materi/Routing/components/ProductDetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(
+//     // <React.StrictMode>
+//     <App />
+//     // </React.StrictMode>
+// );
 root.render(
     // <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<App />}>
+                <Route index element={<Home />} />
+                <Route path="product">
+                    <Route index element={<Product />} />
+                    <Route path=":slug" element={<ProductDetail />} />
+                </Route>
+            </Route>
+        </Routes>
+    </BrowserRouter>
     // </React.StrictMode>
 );
 
