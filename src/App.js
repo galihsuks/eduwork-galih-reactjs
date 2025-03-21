@@ -1,4 +1,4 @@
-import Routing from "./Materi/Routing";
+import Redux from "./Materi/Redux";
 // import Hook from "./Materi/Hook";
 // import Lifecycle from "./Materi/Lifecycle";
 // import FormValidation from "./Materi/Form_validation";
@@ -7,7 +7,7 @@ import Routing from "./Materi/Routing";
 function App() {
     return (
         <div className="App">
-            <Routing />
+            <Redux />
         </div>
     );
 }
