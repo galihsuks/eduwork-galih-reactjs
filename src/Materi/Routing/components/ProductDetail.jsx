@@ -4,7 +4,7 @@ import { products } from "./data";
 export default function ProductDetail() {
     const params = useParams();
     const productSelected = products.filter((e) => {
-        return e.slug == params.slug;
+        return e.slug === params.slug;
     })[0];
     return (
         <>
